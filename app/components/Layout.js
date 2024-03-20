@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div className="md:hidden flex justify-center bg-[#172053] text-white space-x-4 py-2 ">
+      <div className="md:hidden flex justify-center bg-[#172053] text-white space-x-4 py-2 fixed w-full ">
         <button
           className={`text-lg ${
             activeSection === "Discussion Forum"
@@ -45,10 +45,10 @@ const Layout = ({ children }) => {
           Market Stories
         </button>
       </div>
-      <div className="flex h-screen ">
+      <div className="flex h-screen  ">
         <div
           className={`bg-[#172053] text-white w-64 ${
-            isOpen ? "md:block max-[768px]:absolute z-50 h-screen  " : "hidden"
+            isOpen ? "md:block fixed top-0 h-screen z-50 " : "hidden"
           }`}
         >
           <ul className="">
@@ -97,7 +97,7 @@ const Layout = ({ children }) => {
         <div className="flex-grow relative">
           <div
             className={`h-screen ${
-              isOpen ? "max-[768px]:fixed relative top-[50%] max-[768px]:left-64" : ""
+              isOpen ? "max-[768px]:ml-64  z-50 fixed  ml-64 top-[45%]" : ""
             }`}
           >
             <div className={`h-16 ${isOpen ? "" : "relative top-[42%]"}`}>
@@ -108,12 +108,12 @@ const Layout = ({ children }) => {
                 <FaCaretRight />
               </button>
             </div>
-            <div className="p-3">{children}</div>
+            <div className="p-3 overflow-y-auto">{children}</div>
           </div>
         </div>
       
-      <div className="flex justify-between w-[90vw] max-[768px]:hidden">
-        <div className="">
+      <div className="flex justify-between w-[90vw] max-[768px]:hidden ">
+        <div className={`${isOpen? "md:ml-36":""}`}>
           <h1 className="lg:text-3xl text-2xl text-red-600 font-semibold mb-6 mt-2 bg-gray-200 w-72">
             Discussion Forum
           </h1>
@@ -169,7 +169,7 @@ const Layout = ({ children }) => {
             ))}
           </div>
         </div>
-        <div className=" w-[30vw]">
+        <div className=" w-[25vw] ">
           <h1 className="lg:text-3xl text-2xl text-red-600 font-semibold mb-6 mt-2 bg-gray-200 w-64">
             Market Stories
           </h1>
@@ -198,7 +198,7 @@ const Layout = ({ children }) => {
       </div>
           
      {/* Mobile Responsive */}
-     <div className="w-full mr-6 mt-2 md:hidden ">
+     <div className="w-full mr-6 mt-2 md:hidden relative top-12  ">
             {activeSection === "Discussion Forum" && (
               <div className="flex flex-col items-center ">
                
