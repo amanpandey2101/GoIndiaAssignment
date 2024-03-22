@@ -97,7 +97,7 @@ const Layout = ({ children }) => {
         <div className="flex-grow relative">
           <div
             className={`h-screen ${
-              isOpen ? "max-[768px]:ml-64  z-50 fixed  ml-64 top-[45%]" : "max-[768px]:ml-64  z-50 fixed"
+              isOpen ? "max-[768px]:ml-64  z-50 fixed  ml-64 top-[45%]" : "  z-50 fixed"
             }`}
           >
             <div className={`h-16 ${isOpen ? "" : "relative top-[42%]"}`}>
