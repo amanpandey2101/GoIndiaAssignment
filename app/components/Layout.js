@@ -198,14 +198,14 @@ const Layout = ({ children }) => {
       </div>
           
      {/* Mobile Responsive */}
-     <div className="w-full mr-6 mt-2 md:hidden relative top-12  ">
+     <div className="w-full mr-4  mt-2 md:hidden relative top-12   ">
             {activeSection === "Discussion Forum" && (
-              <div className="flex flex-col items-center ">
+              <div className="flex flex-col items-center pl-4 ">
                
                 <div className="space-y-8 ">
                   {discussion.map((item, index) => (
                     <div
-                      className="w-full h-36 rounded-md shadow-md shadow-gray-500"
+                      className="w-full h-36 rounded-md shadow-md shadow-gray-500 px-2"
                       key={index}
                     >
                       {/* Discussion Forum Content */}
