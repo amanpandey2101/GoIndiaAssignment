@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div className="md:hidden flex justify-center bg-[#172053] text-white space-x-4 py-2 fixed w-full ">
+      <div className="md:hidden flex justify-center bg-[#172053] text-white space-x-4 py-2 fixed w-full z-50">
         <button
           className={`text-lg ${
             activeSection === "Discussion Forum"
@@ -97,7 +97,7 @@ const Layout = ({ children }) => {
         <div className="flex-grow relative">
           <div
             className={`h-screen ${
-              isOpen ? "max-[768px]:ml-64  z-50 fixed  ml-64 top-[45%]" : ""
+              isOpen ? "max-[768px]:ml-64  z-50 fixed  ml-64 top-[45%]" : "max-[768px]:ml-64  z-50 fixed"
             }`}
           >
             <div className={`h-16 ${isOpen ? "" : "relative top-[42%]"}`}>
